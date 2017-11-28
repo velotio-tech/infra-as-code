@@ -7,4 +7,4 @@ gem install mysql2 -v '0.4.10'
 bundle install
 rake db:create
 rake db:migrate 
-rails s -d -b 0.0.0.0 
+rails s -d -b 0.0.0.0

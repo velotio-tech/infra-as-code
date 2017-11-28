@@ -1,25 +1,31 @@
 ---
 driver:
-  name: vagrant
+  name: ec2
+  aws_ssh_key_id: smedbot
+  region: us-west-2
+  availability_zone: b
+  subnet_id: subnet-6552af01
+  instance_type: t2.micro
+  image_id: ami-0def3275
+  security_group_ids: ["sg-4848bd34"]
+  retryable_tries: 120
 
 provisioner:
   name: chef_zero
-  # You may wish to disable always updating cookbooks in CI or other testing environments.
-  # For example:
-  #   always_update_cookbooks: <%= !ENV['CI'] %>
-  always_update_cookbooks: true
 
 verifier:
   name: inspec
 
+transport:
+  ssh_key: /home/admin-/azar/smed/keys/smedbot.pem
+
 platforms:
   - name: ubuntu-16.04
-  - name: centos-7
 
 suites:
   - name: default
     run_list:
-      - recipe[ror_setup::default]
+      - recipe[ror-app::default]
     verifier:
       inspec_tests:
         - test/smoke/default
