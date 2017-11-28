@@ -1,9 +1,12 @@
 #
-# Cookbook:: ror_setup
+# Cookbook:: ror-app
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
+package 'git' do
+  action :install
+end
 
 execute "ror-setup" do
   command "curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -"
@@ -34,15 +37,12 @@ execute "setup" do
   command "sh /home/ubuntu/setup.sh"
 end
 
+
 mysql_service 'mysql' do
   port '3306'
   version '5.7'
   initial_root_password 'velotio'
   action [:create, :start]
-end
-
-package 'git' do
-  action :install
 end
 
 git '/home/ubuntu/sample-ror-app' do
@@ -65,4 +65,3 @@ end
 execute "setup" do
   command "sh /home/ubuntu/sample-ror-app/appsetup.sh"
 end
-

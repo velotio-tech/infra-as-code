@@ -15,4 +15,3 @@ rails -v
 sudo apt-get install redis-server -y
 sudo apt-get install libmysqlclient-dev -y
 sudo service redis-server start
-
