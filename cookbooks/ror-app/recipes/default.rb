@@ -4,38 +4,26 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-package 'git' do
-  action :install
-end
+apt_update 'update'
+ruby_runtime '2'
+ruby_gem 'rake'
+ruby_gem 'bundler'
+package 'build-essential'
+package 'git-core'
+package 'curl'
+package 'zlib1g-dev'
+package 'libssl-dev'
+package 'libreadline-dev'
+package 'libyaml-dev'
+package 'libsqlite3-dev'
+package 'sqlite3'
+package 'libxml2-dev'
+package 'libxslt1-dev'
+package 'libcurl4-openssl-dev'
+package 'libffi-dev'
+package 'libmysqlclient-dev'
+ruby_gem 'rails'
 
-execute "ror-setup" do
-  command "curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -"
-end
-
-execute "ror-setup" do
-  command "curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -"
-end
-
-execute "ror-setup" do
-  command 'echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list'
-end
-
-execute "ror-setup" do
-  command "sudo apt-get update -y"
-end
-
-execute "ror-setup" do
-  command "sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs yarn"
-end
-
-cookbook_file "/home/ubuntu/setup.sh" do
-  source "setup.sh"
-  mode "0770"
-end
-
-execute "setup" do
-  command "sh /home/ubuntu/setup.sh"
-end
 
 
 mysql_service 'mysql' do
@@ -56,12 +44,30 @@ cookbook_file "/home/ubuntu/sample-ror-app/config/database.yml" do
   mode "0644"
 end
 
-cookbook_file "/home/ubuntu/sample-ror-app/appsetup.sh" do
-  source "appsetup.sh"
-  mode "0770"
+bundle_install '/home/ubuntu/sample-ror-app/Gemfile' do
+  deployment true
 end
 
+include_recipe "nodejs::nodejs_from_package"
 
-execute "setup" do
-  command "sh /home/ubuntu/sample-ror-app/appsetup.sh"
+apt_package 'redis-server' do
+  action :install
+end
+
+service 'redis-server' do
+  action [ :enable, :start ]
+end
+
+script 'run_app' do
+  interpreter 'bash'
+  user 'root'
+  cwd '/home/ubuntu/sample-ror-app'
+  code <<-EOH
+  rake db:create
+  rake db:migrate
+  rails s -d -b 0.0.0.0
+  EOH
+#not_if { ::File.exist?('/tmp/lockfile') }
+not_if ("netstat -nlt | grep 3000")
+
 end

@@ -1,10 +1,8 @@
 #!/bin/bash
 
 cd /home/ubuntu/sample-ror-app/
-
-gem install mysql2 -v '0.4.10'
-
-bundle install
+#curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+#apt-get install -y nodejs
 rake db:create
 rake db:migrate 
 rails s -d -b 0.0.0.0
