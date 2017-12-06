@@ -19,10 +19,10 @@ describe port(3000) do
   its('protocols') {should eq ['tcp']}
 end
 
-#check ssh cipher
+#check ssh no password
 
-describe ssh_config do
-  its('Ciphers') { should cmp('aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc') }
+describe sshd_config do
+  its('PasswordAuthentication') { should cmp('no') }
 end
 
 #check ssl cipher

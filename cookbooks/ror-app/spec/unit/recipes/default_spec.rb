@@ -5,10 +5,16 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 require 'spec_helper'
+require 'chefspec'
 
 describe 'ror-app::default' do
   let(:chef_run) do
-    runner = ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04')
+    runner = ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
+    stub_data_bag_item('ror_app', 'creds').and_return({
+      id: 'creds',
+      password: 'velotio'
+   })
+
     runner.converge(described_recipe)
   end
 

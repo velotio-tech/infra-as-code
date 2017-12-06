@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-
+my_bag = data_bag_item('ror_app', 'creds')
 apt_update 'update'
 ruby_runtime '2'
 ruby_gem 'rake'
@@ -25,11 +25,12 @@ package 'libmysqlclient-dev'
 ruby_gem 'rails'
 
 
+pass = my_bag['password']
 
 mysql_service 'mysql' do
   port '3306'
   version '5.7'
-  initial_root_password 'velotio'
+  initial_root_password pass
   action [:create, :start]
 end
 
@@ -67,7 +68,6 @@ script 'run_app' do
   rake db:migrate
   rails s -d -b 0.0.0.0
   EOH
-#not_if { ::File.exist?('/tmp/lockfile') }
 not_if ("netstat -nlt | grep 3000")
 
 end
