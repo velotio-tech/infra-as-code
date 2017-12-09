@@ -31,5 +31,3 @@ suites:
       inspec_tests:
         - test/smoke/default/integration_test.rb
         - test/smoke/default/compliance_test.rb
-        - name: mysql test
-          git: https://github.com/dev-sec/mysql-baseline.git
