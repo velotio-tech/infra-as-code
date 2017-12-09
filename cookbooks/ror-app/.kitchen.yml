@@ -1,13 +1,13 @@
 ---
 driver:
   name: ec2
-  aws_ssh_key_id: smedbot
-  region: us-west-2
-  availability_zone: b
-  subnet_id: subnet-6552af01
+  aws_ssh_key_id: coupa
+  region: us-east-1
+  availability_zone: a
+  subnet_id: subnet-b0f8b69a
   instance_type: t2.micro
-  image_id: ami-0def3275
-  security_group_ids: ["sg-4848bd34"]
+  image_id: ami-aa2ea6d0
+  security_group_ids: ["sg-19512a6c"]
   retryable_tries: 120
 
 provisioner:
@@ -17,7 +17,7 @@ verifier:
   name: inspec
 
 transport:
-  ssh_key: /home/admin-/azar/smed/keys/smedbot.pem
+  ssh_key: /opt/keys/coupa.pem
 
 platforms:
   - name: ubuntu-16.04
