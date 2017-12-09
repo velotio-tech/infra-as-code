@@ -22,7 +22,6 @@ package 'libxslt1-dev'
 package 'libcurl4-openssl-dev'
 package 'libffi-dev'
 package 'libmysqlclient-dev'
-ruby_gem 'rails'
 
 
 pass = my_bag['password']
@@ -45,6 +44,7 @@ cookbook_file "/home/ubuntu/sample-ror-app/config/database.yml" do
   mode "0644"
 end
 
+ruby_gem 'rails'
 bundle_install '/home/ubuntu/sample-ror-app/Gemfile' do
   deployment true
 end
