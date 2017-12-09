@@ -3,7 +3,7 @@ driver:
   name: ec2
   aws_ssh_key_id: coupa
   region: us-east-1
-  availability_zone: a
+  availability_zone: d
   subnet_id: subnet-b0f8b69a
   instance_type: t2.micro
   image_id: ami-aa2ea6d0
