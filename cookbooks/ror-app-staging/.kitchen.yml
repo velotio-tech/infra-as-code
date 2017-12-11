@@ -23,7 +23,7 @@ platforms:
   - name: ubuntu-16.04
 
 suites:
-  - name: default 
+  - name: default
     data_bags_path: 'test/smoke/data_bags'
     run_list:
       - recipe[ror-app::default]
