@@ -6,14 +6,7 @@
 
 require 'spec_helper'
 require 'chefspec'
-require 'simplecov'
-require 'simplecov-json'
-require 'simplecov-rcov'
 
-SimpleCov.formatters = [
-  SimpleCov::Formatter::RcovFormatter
-]
-SimpleCov.start
 
 ChefSpec::Coverage.start!
 
