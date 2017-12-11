@@ -1,0 +1,1 @@
+F, [2017-11-29T15:07:24.192144 #13538] FATAL -- default-ubuntu-1404: The `berkshelf' gem is missing and must be installed or cannot be properly activated. Run `gem install berkshelf` or add the following to your Gemfile if you are using Bundler: `gem 'berkshelf'`.

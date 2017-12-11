@@ -1,0 +1,33 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: smedbot
+  region: us-west-2
+  availability_zone: b
+  subnet_id: subnet-6552af01
+  instance_type: t2.micro
+  image_id: ami-0def3275
+  security_group_ids: ["sg-4848bd34"]
+  retryable_tries: 120
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+transport:
+  ssh_key: /home/admin-/azar/smed/keys/smedbot.pem
+
+platforms:
+  - name: ubuntu-16.04
+
+suites:
+  - name: default
+    data_bags_path: 'test/smoke/data_bags'
+    run_list:
+      - recipe[ror-app::default]
+    verifier:
+      inspec_tests:
+        - name: mysql test
+          git: https://github.com/dev-sec/mysql-baseline.git
