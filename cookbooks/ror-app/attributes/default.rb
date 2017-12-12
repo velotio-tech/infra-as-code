@@ -1,1 +1,1 @@
-default['ror-app']['port'] = 3000
+default['mysql']['version'] = '5.7'

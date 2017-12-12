@@ -12,7 +12,7 @@ ChefSpec::Coverage.start!
 describe 'ror-app::default' do
   let(:chef_run) do
     ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04') do |node|
-      node.normal['rorapp']['port'] = 3000
+      node.normal['mysql']['version'] = "5.7"
       stub_command("netstat -nlt | grep 3000").and_return(false)
       stub_data_bag_item('ror_app', 'creds').and_return({
         id: 'creds',
@@ -47,9 +47,8 @@ describe 'ror-app::default' do
   end
 
 
-  it 'creates mysql  service' do
+  it 'creates mysql service' do
       expect(chef_run).to create_mysql_service('mysql').with(
-        version: '5.7',
         port: '3306',
         action: [:create, :start]
       )

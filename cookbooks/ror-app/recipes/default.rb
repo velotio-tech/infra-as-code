@@ -28,7 +28,7 @@ pass = my_bag['password']
 
 mysql_service 'mysql' do
   port '3306'
-  version '5.7'
+  version node['mysql']['version']
   initial_root_password pass
   action [:create, :start]
 end
@@ -66,7 +66,7 @@ script 'run_app' do
   code <<-EOH
   rake db:create
   rake db:migrate
-  rails s -d -b 0.0.0.0 -p #{node['rorapp']['port']}
+  rails s -d -b 0.0.0.0 -p 3000}
   EOH
 not_if ("netstat -nlt | grep 3000")
 
