@@ -15,8 +15,8 @@ require 'chefspec'
 #]
 #SimpleCov.start
 #
-#ChefSpec::Coverage.start!
-#
+ChefSpec::Coverage.start!
+
 describe 'ror-app::default' do
   let(:chef_run) do
     runner = ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
