@@ -1,3 +1,6 @@
 ---
 username: ubuntu
-last_error: Aws::EC2::Errors::InvalidSubnetIDNotFound
+server_id: i-023cc1f051a5e3fec
+hostname: ec2-34-227-163-206.compute-1.amazonaws.com
+last_action: verify
+last_error: Kitchen::ActionFailed

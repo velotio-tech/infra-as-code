@@ -1,14 +1,15 @@
 ---
 driver:
-  name: ec2
-  aws_ssh_key_id: coupa
-  region: us-east-1
-  availability_zone: d
-  subnet_id: subnet-b0f8b69a
-  instance_type: t2.micro
-  image_id: ami-aa2ea6d0
-  security_group_ids: ["sg-19512a6c"]
-  retryable_tries: 120
+  name: vagrant
+  # name: ec2
+  # aws_ssh_key_id: coupa
+  # region: us-east-1
+  # availability_zone: d
+  # subnet_id: subnet-b0f8b69a
+  # instance_type: t2.micro
+  # image_id: ami-aa2ea6d0
+  # security_group_ids: ["sg-19512a6c"]
+  # retryable_tries: 120
 
 provisioner:
   name: chef_zero
@@ -19,7 +20,7 @@ verifier:
   output: ./inspec.xml
 
 transport:
-  ssh_key: /opt/keys/coupa.pem
+  ssh_key: ~/ssh-keys/coupa.pem
 
 platforms:
   - name: ubuntu-16.04
@@ -30,8 +31,8 @@ suites:
     run_list:
       - recipe[ror-app::default]
     attributes:
-      rorapp:
-         port: 3000
+      mysql:
+        version: '5.8'
     verifier:
       inspec_tests:
         - test/smoke/default/integration_test.rb

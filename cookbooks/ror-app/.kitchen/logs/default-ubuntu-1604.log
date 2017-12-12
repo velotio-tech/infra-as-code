@@ -1,43 +1,252 @@
-I, [2017-12-11T20:39:16.479719 #24191]  INFO -- default-ubuntu-1604: -----> Creating <default-ubuntu-1604>...
-I, [2017-12-11T20:39:17.674723 #24191]  INFO -- default-ubuntu-1604: Detected platform: ubuntu version 16.04 on x86_64. Instance Type: t2.micro. Default username: ubuntu (default).
-I, [2017-12-11T20:39:17.675197 #24191]  INFO -- default-ubuntu-1604: If you are not using an account that qualifies under the AWS
-free-tier, you may be charged to run these suites. The charge
-should be minimal, but neither Test Kitchen nor its maintainers
-are responsible for your incurred costs.
-
-E, [2017-12-11T20:39:18.130291 #24191] ERROR -- default-ubuntu-1604: Create failed on instance <default-ubuntu-1604>.
-E, [2017-12-11T20:39:18.130764 #24191] ERROR -- default-ubuntu-1604: ------Exception-------
-E, [2017-12-11T20:39:18.130855 #24191] ERROR -- default-ubuntu-1604: Class: Aws::EC2::Errors::InvalidSubnetIDNotFound
-E, [2017-12-11T20:39:18.130907 #24191] ERROR -- default-ubuntu-1604: Message: The subnet ID 'subnet-b0f8b69a' does not exist
-E, [2017-12-11T20:39:18.130969 #24191] ERROR -- default-ubuntu-1604: ----------------------
-E, [2017-12-11T20:39:18.131016 #24191] ERROR -- default-ubuntu-1604: ------Backtrace-------
-E, [2017-12-11T20:39:18.131058 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/raise_response_errors.rb:15:in `call'
-E, [2017-12-11T20:39:18.131102 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/jsonvalue_converter.rb:20:in `call'
-E, [2017-12-11T20:39:18.131151 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/idempotency_token.rb:18:in `call'
-E, [2017-12-11T20:39:18.131218 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/param_converter.rb:20:in `call'
-E, [2017-12-11T20:39:18.131274 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/response_target.rb:21:in `call'
-E, [2017-12-11T20:39:18.131318 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/request.rb:70:in `send_request'
-E, [2017-12-11T20:39:18.131360 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/base.rb:207:in `block (2 levels) in define_operation_methods'
-E, [2017-12-11T20:39:18.131402 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/request.rb:24:in `call'
-E, [2017-12-11T20:39:18.131457 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:41:in `call'
-E, [2017-12-11T20:39:18.131502 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:87:in `call'
-E, [2017-12-11T20:39:18.131545 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operation_methods.rb:19:in `block in add_operation'
-E, [2017-12-11T20:39:18.131587 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/aws/client.rb:103:in `create_instance'
-E, [2017-12-11T20:39:18.131628 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:345:in `submit_server'
-E, [2017-12-11T20:39:18.131670 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:186:in `create'
-E, [2017-12-11T20:39:18.131711 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `public_send'
-E, [2017-12-11T20:39:18.131777 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `block in perform_action'
-E, [2017-12-11T20:39:18.131825 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
-E, [2017-12-11T20:39:18.131879 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:489:in `block in action'
-E, [2017-12-11T20:39:18.131923 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2017-12-11T20:39:18.131966 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:488:in `action'
-E, [2017-12-11T20:39:18.132008 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `perform_action'
-E, [2017-12-11T20:39:18.132049 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:370:in `create_action'
-E, [2017-12-11T20:39:18.132091 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:359:in `block in transition_to'
-E, [2017-12-11T20:39:18.132132 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `each'
-E, [2017-12-11T20:39:18.132174 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `transition_to'
-E, [2017-12-11T20:39:18.132215 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:124:in `create'
-E, [2017-12-11T20:39:18.132256 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `public_send'
-E, [2017-12-11T20:39:18.132300 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
-E, [2017-12-11T20:39:18.132312 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
-E, [2017-12-11T20:39:18.132324 #24191] ERROR -- default-ubuntu-1604: ----End Backtrace-----
+I, [2017-12-12T17:33:19.276257 #81703]  INFO -- default-ubuntu-1604: -----> Converging <default-ubuntu-1604>...
+I, [2017-12-12T17:33:19.276923 #81703]  INFO -- default-ubuntu-1604: Preparing files for transfer
+I, [2017-12-12T17:33:19.277033 #81703]  INFO -- default-ubuntu-1604: Preparing dna.json
+I, [2017-12-12T17:33:19.277501 #81703]  INFO -- default-ubuntu-1604: Resolving cookbook dependencies with Berkshelf 6.2.0...
+I, [2017-12-12T17:33:20.022110 #81703]  INFO -- default-ubuntu-1604: Removing non-cookbook files before transfer
+I, [2017-12-12T17:33:20.060069 #81703]  INFO -- default-ubuntu-1604: Preparing data_bags
+I, [2017-12-12T17:33:20.061088 #81703]  INFO -- default-ubuntu-1604: Preparing validation.pem
+I, [2017-12-12T17:33:20.062092 #81703]  INFO -- default-ubuntu-1604: Preparing client.rb
+I, [2017-12-12T17:33:22.997313 #81703]  INFO -- default-ubuntu-1604: -----> Chef Omnibus installation detected (install only if missing)
+I, [2017-12-12T17:33:23.512350 #81703]  INFO -- default-ubuntu-1604: Transferring files to <default-ubuntu-1604>
+I, [2017-12-12T17:38:17.657611 #81703]  INFO -- default-ubuntu-1604: Starting Chef Client, version 13.6.4
+I, [2017-12-12T17:38:18.799163 #81703]  INFO -- default-ubuntu-1604: resolving cookbooks for run list: ["ror-app::default"]
+I, [2017-12-12T17:38:19.265794 #81703]  INFO -- default-ubuntu-1604: Synchronizing Cookbooks:
+I, [2017-12-12T17:38:19.513365 #81703]  INFO -- default-ubuntu-1604:   - ror-app (0.1.0)
+I, [2017-12-12T17:38:19.513732 #81703]  INFO -- default-ubuntu-1604:   - rake (0.1.1)
+I, [2017-12-12T17:38:19.514079 #81703]  INFO -- default-ubuntu-1604:   - poise (2.8.1)
+I, [2017-12-12T17:38:19.514407 #81703]  INFO -- default-ubuntu-1604:   - build-essential (8.0.4)
+I, [2017-12-12T17:38:19.514761 #81703]  INFO -- default-ubuntu-1604:   - mysql (8.5.1)
+I, [2017-12-12T17:38:19.515101 #81703]  INFO -- default-ubuntu-1604:   - poise-archive (1.5.0)
+I, [2017-12-12T17:38:19.515431 #81703]  INFO -- default-ubuntu-1604:   - windows (3.4.1)
+I, [2017-12-12T17:38:19.515767 #81703]  INFO -- default-ubuntu-1604:   - poise-ruby (2.3.0)
+I, [2017-12-12T17:38:19.516161 #81703]  INFO -- default-ubuntu-1604:   - L7-redis (1.0.8)
+I, [2017-12-12T17:38:19.516482 #81703]  INFO -- default-ubuntu-1604:   - nodejs (5.0.0)
+I, [2017-12-12T17:38:19.516745 #81703]  INFO -- default-ubuntu-1604:   - ark (3.1.0)
+I, [2017-12-12T17:38:19.516959 #81703]  INFO -- default-ubuntu-1604:   - cron (5.0.1)
+I, [2017-12-12T17:38:19.517160 #81703]  INFO -- default-ubuntu-1604:   - mingw (2.0.1)
+I, [2017-12-12T17:38:19.517389 #81703]  INFO -- default-ubuntu-1604:   - seven_zip (2.0.2)
+I, [2017-12-12T17:38:19.517590 #81703]  INFO -- default-ubuntu-1604:   - poise-languages (2.1.1)
+I, [2017-12-12T17:38:19.517807 #81703]  INFO -- default-ubuntu-1604:   - ohai (5.2.0)
+I, [2017-12-12T17:38:19.517977 #81703]  INFO -- default-ubuntu-1604: Installing Cookbook Gems:
+I, [2017-12-12T17:38:19.523950 #81703]  INFO -- default-ubuntu-1604: Compiling Cookbooks...
+I, [2017-12-12T17:38:19.760872 #81703]  INFO -- default-ubuntu-1604: Converging 29 resources
+I, [2017-12-12T17:38:19.761175 #81703]  INFO -- default-ubuntu-1604: Recipe: ror-app::default
+I, [2017-12-12T17:38:19.761638 #81703]  INFO -- default-ubuntu-1604:   * apt_update[update] action periodic (up to date)
+I, [2017-12-12T17:38:19.761955 #81703]  INFO -- default-ubuntu-1604:   * ruby_runtime[2] action install
+I, [2017-12-12T17:38:19.762311 #81703]  INFO -- default-ubuntu-1604:     * poise_languages_system[ruby2.3] action install
+I, [2017-12-12T17:38:19.762699 #81703]  INFO -- default-ubuntu-1604: (up to date)
+I, [2017-12-12T17:38:19.763126 #81703]  INFO -- default-ubuntu-1604:     * apt_package[ruby2.3, ruby2.3-dev] action nothing (skipped due to action :nothing)
+I, [2017-12-12T17:38:19.763427 #81703]  INFO -- default-ubuntu-1604:      (up to date)
+I, [2017-12-12T17:38:20.032500 #81703]  INFO -- default-ubuntu-1604:   * ruby_gem[bundler] action upgrade (up to date)
+I, [2017-12-12T17:38:20.279985 #81703]  INFO -- default-ubuntu-1604:    (up to date)
+I, [2017-12-12T17:38:20.280647 #81703]  INFO -- default-ubuntu-1604: * ruby_gem[rake] action install (up to date)
+I, [2017-12-12T17:38:20.282694 #81703]  INFO -- default-ubuntu-1604: * ruby_gem[bundler] action install (up to date)
+I, [2017-12-12T17:38:20.283169 #81703]  INFO -- default-ubuntu-1604: * apt_package[build-essential] action install (up to date)
+I, [2017-12-12T17:38:20.283490 #81703]  INFO -- default-ubuntu-1604: * apt_package[git-core] action install (up to date)
+I, [2017-12-12T17:38:20.283728 #81703]  INFO -- default-ubuntu-1604: * apt_package[curl] action install (up to date)
+I, [2017-12-12T17:38:20.283950 #81703]  INFO -- default-ubuntu-1604: * apt_package[zlib1g-dev] action install (up to date)
+I, [2017-12-12T17:38:20.298618 #81703]  INFO -- default-ubuntu-1604: * apt_package[libssl-dev] action install (up to date)
+I, [2017-12-12T17:38:20.527505 #81703]  INFO -- default-ubuntu-1604: * apt_package[libreadline-dev] action install (up to date)
+I, [2017-12-12T17:38:20.527888 #81703]  INFO -- default-ubuntu-1604: * apt_package[libyaml-dev] action install (up to date)
+I, [2017-12-12T17:38:20.528237 #81703]  INFO -- default-ubuntu-1604: * apt_package[libsqlite3-dev] action install (up to date)
+I, [2017-12-12T17:38:20.528593 #81703]  INFO -- default-ubuntu-1604: * apt_package[sqlite3] action install (up to date)
+I, [2017-12-12T17:38:20.556308 #81703]  INFO -- default-ubuntu-1604: * apt_package[libxml2-dev] action install (up to date)
+I, [2017-12-12T17:38:20.774762 #81703]  INFO -- default-ubuntu-1604: * apt_package[libxslt1-dev] action install (up to date)
+I, [2017-12-12T17:38:20.775164 #81703]  INFO -- default-ubuntu-1604: * apt_package[libcurl4-openssl-dev] action install (up to date)
+I, [2017-12-12T17:38:20.775525 #81703]  INFO -- default-ubuntu-1604: * apt_package[libffi-dev] action install (up to date)
+I, [2017-12-12T17:38:20.775912 #81703]  INFO -- default-ubuntu-1604: * apt_package[libmysqlclient-dev] action install (up to date)
+I, [2017-12-12T17:38:20.782178 #81703]  INFO -- default-ubuntu-1604: * mysql_service[mysql] action create
+I, [2017-12-12T17:38:20.803506 #81703]  INFO -- default-ubuntu-1604:   * mysql_server_installation_package[mysql] action install
+I, [2017-12-12T17:38:20.896066 #81703]  INFO -- default-ubuntu-1604:     * apt_package[mysql-community-server] action install
+I, [2017-12-12T17:38:21.022590 #81703]  INFO -- default-ubuntu-1604:       * No candidate version available for mysql-community-server
+I, [2017-12-12T17:38:21.023051 #81703]  INFO -- default-ubuntu-1604:       ================================================================================
+I, [2017-12-12T17:38:21.023462 #81703]  INFO -- default-ubuntu-1604:       Error executing action `install` on resource 'apt_package[mysql-community-server]'
+I, [2017-12-12T17:38:21.023862 #81703]  INFO -- default-ubuntu-1604:       ================================================================================
+I, [2017-12-12T17:38:21.024139 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.024482 #81703]  INFO -- default-ubuntu-1604:       Chef::Exceptions::Package
+I, [2017-12-12T17:38:21.024836 #81703]  INFO -- default-ubuntu-1604:       -------------------------
+I, [2017-12-12T17:38:21.030061 #81703]  INFO -- default-ubuntu-1604:       No candidate version available for mysql-community-server
+I, [2017-12-12T17:38:21.030380 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.030752 #81703]  INFO -- default-ubuntu-1604:       Resource Declaration:
+I, [2017-12-12T17:38:21.031106 #81703]  INFO -- default-ubuntu-1604:       ---------------------
+I, [2017-12-12T17:38:21.031475 #81703]  INFO -- default-ubuntu-1604:       # In /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb
+I, [2017-12-12T17:38:21.031745 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.032100 #81703]  INFO -- default-ubuntu-1604: 17:       package new_resource.package_name do
+I, [2017-12-12T17:38:21.032490 #81703]  INFO -- default-ubuntu-1604: 18:         version new_resource.package_version if new_resource.package_version
+I, [2017-12-12T17:38:21.051717 #81703]  INFO -- default-ubuntu-1604: 19:         options new_resource.package_options if new_resource.package_options
+I, [2017-12-12T17:38:21.052465 #81703]  INFO -- default-ubuntu-1604: 20:         notifies :install, 'package[perl-Sys-Hostname-Long]', :immediately if platform_family?('suse')
+I, [2017-12-12T17:38:21.052969 #81703]  INFO -- default-ubuntu-1604: 21:         notifies :run, 'execute[Initial DB setup script]', :immediately if platform_family?('suse')
+I, [2017-12-12T17:38:21.053364 #81703]  INFO -- default-ubuntu-1604: 22:         action :install
+I, [2017-12-12T17:38:21.053633 #81703]  INFO -- default-ubuntu-1604: 23:       end
+I, [2017-12-12T17:38:21.053847 #81703]  INFO -- default-ubuntu-1604: 24: 
+I, [2017-12-12T17:38:21.054016 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.054238 #81703]  INFO -- default-ubuntu-1604:       Compiled Resource:
+I, [2017-12-12T17:38:21.155216 #81703]  INFO -- default-ubuntu-1604:       ------------------
+I, [2017-12-12T17:38:21.155774 #81703]  INFO -- default-ubuntu-1604:       # Declared in /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb:17:in `block in <class:MysqlServerInstallationPackage>'
+I, [2017-12-12T17:38:21.156023 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.156458 #81703]  INFO -- default-ubuntu-1604:       apt_package("mysql-community-server") do
+I, [2017-12-12T17:38:21.156825 #81703]  INFO -- default-ubuntu-1604:  package_name "mysql-community-server"
+I, [2017-12-12T17:38:21.157189 #81703]  INFO -- default-ubuntu-1604:  action [:install]
+I, [2017-12-12T17:38:21.157563 #81703]  INFO -- default-ubuntu-1604:  default_guard_interpreter :default
+I, [2017-12-12T17:38:21.157915 #81703]  INFO -- default-ubuntu-1604:  declared_type :package
+I, [2017-12-12T17:38:21.158299 #81703]  INFO -- default-ubuntu-1604:  cookbook_name "ror-app"
+I, [2017-12-12T17:38:21.158528 #81703]  INFO -- default-ubuntu-1604:       end
+I, [2017-12-12T17:38:21.158718 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.158939 #81703]  INFO -- default-ubuntu-1604:       System Info:
+I, [2017-12-12T17:38:21.159150 #81703]  INFO -- default-ubuntu-1604:       ------------
+I, [2017-12-12T17:38:21.159380 #81703]  INFO -- default-ubuntu-1604:       chef_version=13.6.4
+I, [2017-12-12T17:38:21.159608 #81703]  INFO -- default-ubuntu-1604:       platform=ubuntu
+I, [2017-12-12T17:38:21.159823 #81703]  INFO -- default-ubuntu-1604:       platform_version=16.04
+I, [2017-12-12T17:38:21.160057 #81703]  INFO -- default-ubuntu-1604:       ruby=ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux]
+I, [2017-12-12T17:38:21.160304 #81703]  INFO -- default-ubuntu-1604:       program_name=chef-client worker: ppid=26000;start=12:08:17;
+I, [2017-12-12T17:38:21.160543 #81703]  INFO -- default-ubuntu-1604:       executable=/opt/chef/bin/chef-client
+I, [2017-12-12T17:38:21.160721 #81703]  INFO -- default-ubuntu-1604:       
+I, [2017-12-12T17:38:21.160890 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.161140 #81703]  INFO -- default-ubuntu-1604:     ================================================================================
+I, [2017-12-12T17:38:21.161406 #81703]  INFO -- default-ubuntu-1604:     Error executing action `install` on resource 'mysql_server_installation_package[mysql]'
+I, [2017-12-12T17:38:21.161666 #81703]  INFO -- default-ubuntu-1604:     ================================================================================
+I, [2017-12-12T17:38:21.161826 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.277474 #81703]  INFO -- default-ubuntu-1604:     Chef::Exceptions::Package
+I, [2017-12-12T17:38:21.277994 #81703]  INFO -- default-ubuntu-1604:     -------------------------
+I, [2017-12-12T17:38:21.278476 #81703]  INFO -- default-ubuntu-1604:     apt_package[mysql-community-server] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb line 17) had an error: Chef::Exceptions::Package: No candidate version available for mysql-community-server
+I, [2017-12-12T17:38:21.278778 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.279133 #81703]  INFO -- default-ubuntu-1604:     Resource Declaration:
+I, [2017-12-12T17:38:21.279498 #81703]  INFO -- default-ubuntu-1604:     ---------------------
+I, [2017-12-12T17:38:21.279892 #81703]  INFO -- default-ubuntu-1604:     # In /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb
+I, [2017-12-12T17:38:21.280170 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.280611 #81703]  INFO -- default-ubuntu-1604:      36:           install = mysql_server_installation(new_resource.name, &block)
+I, [2017-12-12T17:38:21.280939 #81703]  INFO -- default-ubuntu-1604:      37:         when 'package'
+I, [2017-12-12T17:38:21.281906 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.282146 #81703]  INFO -- default-ubuntu-1604:     Compiled Resource:
+I, [2017-12-12T17:38:21.282422 #81703]  INFO -- default-ubuntu-1604:     ------------------
+I, [2017-12-12T17:38:21.282674 #81703]  INFO -- default-ubuntu-1604:     # Declared in /tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb:36:in `installation'
+I, [2017-12-12T17:38:21.282824 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.283052 #81703]  INFO -- default-ubuntu-1604:     mysql_server_installation_package("mysql") do
+I, [2017-12-12T17:38:21.299302 #81703]  INFO -- default-ubuntu-1604:       action [:install]
+I, [2017-12-12T17:38:21.299975 #81703]  INFO -- default-ubuntu-1604:       default_guard_interpreter :default
+I, [2017-12-12T17:38:21.300318 #81703]  INFO -- default-ubuntu-1604:       declared_type :mysql_server_installation
+I, [2017-12-12T17:38:21.300673 #81703]  INFO -- default-ubuntu-1604:       cookbook_name "ror-app"
+I, [2017-12-12T17:38:21.301024 #81703]  INFO -- default-ubuntu-1604:       version "5.8"
+I, [2017-12-12T17:38:21.301351 #81703]  INFO -- default-ubuntu-1604:       major_version "5.8"
+I, [2017-12-12T17:38:21.301694 #81703]  INFO -- default-ubuntu-1604:       package_name "mysql-community-server"
+I, [2017-12-12T17:38:21.302028 #81703]  INFO -- default-ubuntu-1604:     end
+I, [2017-12-12T17:38:21.302330 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.414551 #81703]  INFO -- default-ubuntu-1604:     System Info:
+I, [2017-12-12T17:38:21.414991 #81703]  INFO -- default-ubuntu-1604:     ------------
+I, [2017-12-12T17:38:21.415340 #81703]  INFO -- default-ubuntu-1604:     chef_version=13.6.4
+I, [2017-12-12T17:38:21.415690 #81703]  INFO -- default-ubuntu-1604:     platform=ubuntu
+I, [2017-12-12T17:38:21.416097 #81703]  INFO -- default-ubuntu-1604:     platform_version=16.04
+I, [2017-12-12T17:38:21.416538 #81703]  INFO -- default-ubuntu-1604:     ruby=ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux]
+I, [2017-12-12T17:38:21.416982 #81703]  INFO -- default-ubuntu-1604:     program_name=chef-client worker: ppid=26000;start=12:08:17;
+I, [2017-12-12T17:38:21.417914 #81703]  INFO -- default-ubuntu-1604:     executable=/opt/chef/bin/chef-client
+I, [2017-12-12T17:38:21.418296 #81703]  INFO -- default-ubuntu-1604:     
+I, [2017-12-12T17:38:21.418496 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.418798 #81703]  INFO -- default-ubuntu-1604:   ================================================================================
+I, [2017-12-12T17:38:21.419034 #81703]  INFO -- default-ubuntu-1604:   Error executing action `create` on resource 'mysql_service[mysql]'
+I, [2017-12-12T17:38:21.419298 #81703]  INFO -- default-ubuntu-1604:   ================================================================================
+I, [2017-12-12T17:38:21.419482 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.419693 #81703]  INFO -- default-ubuntu-1604:   Chef::Exceptions::Package
+I, [2017-12-12T17:38:21.419911 #81703]  INFO -- default-ubuntu-1604:   -------------------------
+I, [2017-12-12T17:38:21.420245 #81703]  INFO -- default-ubuntu-1604:   mysql_server_installation_package[mysql] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb line 36) had an error: Chef::Exceptions::Package: apt_package[mysql-community-server] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb line 17) had an error: Chef::Exceptions::Package: No candidate version available for mysql-community-server
+I, [2017-12-12T17:38:21.420421 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.420643 #81703]  INFO -- default-ubuntu-1604:   Resource Declaration:
+I, [2017-12-12T17:38:21.420869 #81703]  INFO -- default-ubuntu-1604:   ---------------------
+I, [2017-12-12T17:38:21.421096 #81703]  INFO -- default-ubuntu-1604:   # In /tmp/kitchen/cache/cookbooks/ror-app/recipes/default.rb
+I, [2017-12-12T17:38:21.421264 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.421487 #81703]  INFO -- default-ubuntu-1604:    29: mysql_service 'mysql' do
+I, [2017-12-12T17:38:21.525282 #81703]  INFO -- default-ubuntu-1604:    30:   port '3306'
+I, [2017-12-12T17:38:21.525844 #81703]  INFO -- default-ubuntu-1604:    31:   version node['mysql']['version']
+I, [2017-12-12T17:38:21.526212 #81703]  INFO -- default-ubuntu-1604:    32:   initial_root_password pass
+I, [2017-12-12T17:38:21.526559 #81703]  INFO -- default-ubuntu-1604:    33:   action [:create, :start]
+I, [2017-12-12T17:38:21.526898 #81703]  INFO -- default-ubuntu-1604:    34: end
+I, [2017-12-12T17:38:21.527248 #81703]  INFO -- default-ubuntu-1604:    35: 
+I, [2017-12-12T17:38:21.527473 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.527812 #81703]  INFO -- default-ubuntu-1604:   Compiled Resource:
+I, [2017-12-12T17:38:21.528081 #81703]  INFO -- default-ubuntu-1604:   ------------------
+I, [2017-12-12T17:38:21.528363 #81703]  INFO -- default-ubuntu-1604:   # Declared in /tmp/kitchen/cache/cookbooks/ror-app/recipes/default.rb:29:in `from_file'
+I, [2017-12-12T17:38:21.528546 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.528754 #81703]  INFO -- default-ubuntu-1604:   mysql_service("mysql") do
+I, [2017-12-12T17:38:21.528971 #81703]  INFO -- default-ubuntu-1604:     action [:create, :start]
+I, [2017-12-12T17:38:21.529192 #81703]  INFO -- default-ubuntu-1604:     default_guard_interpreter :default
+I, [2017-12-12T17:38:21.529408 #81703]  INFO -- default-ubuntu-1604:     declared_type :mysql_service
+I, [2017-12-12T17:38:21.529622 #81703]  INFO -- default-ubuntu-1604:     cookbook_name "ror-app"
+I, [2017-12-12T17:38:21.529839 #81703]  INFO -- default-ubuntu-1604:     recipe_name "default"
+I, [2017-12-12T17:38:21.530039 #81703]  INFO -- default-ubuntu-1604:     port "3306"
+I, [2017-12-12T17:38:21.547347 #81703]  INFO -- default-ubuntu-1604:     version "5.8"
+I, [2017-12-12T17:38:21.548169 #81703]  INFO -- default-ubuntu-1604:     initial_root_password "velotio"
+I, [2017-12-12T17:38:21.549017 #81703]  INFO -- default-ubuntu-1604:   end
+I, [2017-12-12T17:38:21.549441 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.549998 #81703]  INFO -- default-ubuntu-1604:   System Info:
+I, [2017-12-12T17:38:21.550514 #81703]  INFO -- default-ubuntu-1604:   ------------
+I, [2017-12-12T17:38:21.550868 #81703]  INFO -- default-ubuntu-1604:   chef_version=13.6.4
+I, [2017-12-12T17:38:21.551200 #81703]  INFO -- default-ubuntu-1604:   platform=ubuntu
+I, [2017-12-12T17:38:21.551566 #81703]  INFO -- default-ubuntu-1604:   platform_version=16.04
+I, [2017-12-12T17:38:21.665794 #81703]  INFO -- default-ubuntu-1604:   ruby=ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux]
+I, [2017-12-12T17:38:21.666355 #81703]  INFO -- default-ubuntu-1604:   program_name=chef-client worker: ppid=26000;start=12:08:17;
+I, [2017-12-12T17:38:21.666835 #81703]  INFO -- default-ubuntu-1604:   executable=/opt/chef/bin/chef-client
+I, [2017-12-12T17:38:21.667159 #81703]  INFO -- default-ubuntu-1604:   
+I, [2017-12-12T17:38:21.667486 #81703]  INFO -- default-ubuntu-1604: 
+I, [2017-12-12T17:38:21.667916 #81703]  INFO -- default-ubuntu-1604: Running handlers:
+I, [2017-12-12T17:38:21.668357 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] ERROR: Running exception handlers
+I, [2017-12-12T17:38:21.668869 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] ERROR: Running exception handlers
+I, [2017-12-12T17:38:21.669551 #81703]  INFO -- default-ubuntu-1604: Running handlers complete
+I, [2017-12-12T17:38:21.670226 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] ERROR: Exception handlers complete
+I, [2017-12-12T17:38:21.670995 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] ERROR: Exception handlers complete
+I, [2017-12-12T17:38:21.671538 #81703]  INFO -- default-ubuntu-1604: Chef Client failed. 0 resources updated in 03 seconds
+I, [2017-12-12T17:38:21.671869 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2017-12-12T17:38:21.672111 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2017-12-12T17:38:21.672355 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2017-12-12T17:38:21.672582 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2017-12-12T17:38:21.673187 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] ERROR: mysql_service[mysql] (ror-app::default line 29) had an error: Chef::Exceptions::Package: mysql_server_installation_package[mysql] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb line 36) had an error: Chef::Exceptions::Package: apt_package[mysql-community-server] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb line 17) had an error: Chef::Exceptions::Package: No candidate version available for mysql-community-server
+I, [2017-12-12T17:38:21.673658 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] ERROR: mysql_service[mysql] (ror-app::default line 29) had an error: Chef::Exceptions::Package: mysql_server_installation_package[mysql] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_service.rb line 36) had an error: Chef::Exceptions::Package: apt_package[mysql-community-server] (/tmp/kitchen/cache/cookbooks/mysql/libraries/mysql_server_installation_package.rb line 17) had an error: Chef::Exceptions::Package: No candidate version available for mysql-community-server
+I, [2017-12-12T17:38:21.673908 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+I, [2017-12-12T17:38:21.674156 #81703]  INFO -- default-ubuntu-1604: [2017-12-12T12:08:20+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2017-12-12T17:38:21.748047 #81703] ERROR -- default-ubuntu-1604: Converge failed on instance <default-ubuntu-1604>.
+E, [2017-12-12T17:38:21.748172 #81703] ERROR -- default-ubuntu-1604: ------Exception-------
+E, [2017-12-12T17:38:21.748193 #81703] ERROR -- default-ubuntu-1604: Class: Kitchen::ActionFailed
+E, [2017-12-12T17:38:21.748207 #81703] ERROR -- default-ubuntu-1604: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2017-12-12T17:38:21.748220 #81703] ERROR -- default-ubuntu-1604: ----------------------
+E, [2017-12-12T17:38:21.748231 #81703] ERROR -- default-ubuntu-1604: ------Backtrace-------
+E, [2017-12-12T17:38:21.748243 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/provisioner/base.rb:83:in `rescue in call'
+E, [2017-12-12T17:38:21.748255 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/provisioner/base.rb:86:in `call'
+E, [2017-12-12T17:38:21.748267 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:384:in `block in converge_action'
+E, [2017-12-12T17:38:21.748290 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-12T17:38:21.748304 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-12T17:38:21.748316 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-12T17:38:21.748328 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-12T17:38:21.748339 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:380:in `converge_action'
+E, [2017-12-12T17:38:21.748351 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-12T17:38:21.748363 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-12T17:38:21.748375 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-12T17:38:21.748386 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2017-12-12T17:38:21.748411 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-12T17:38:21.748424 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-12T17:38:21.748436 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-12T17:38:21.748447 #81703] ERROR -- default-ubuntu-1604: ----End Backtrace-----
+E, [2017-12-12T17:38:21.748458 #81703] ERROR -- default-ubuntu-1604: ---Nested Exception---
+E, [2017-12-12T17:38:21.748469 #81703] ERROR -- default-ubuntu-1604: Class: Kitchen::Transport::SshFailed
+E, [2017-12-12T17:38:21.748480 #81703] ERROR -- default-ubuntu-1604: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2017-12-12T17:38:21.748492 #81703] ERROR -- default-ubuntu-1604: ----------------------
+E, [2017-12-12T17:38:21.748503 #81703] ERROR -- default-ubuntu-1604: ------Backtrace-------
+E, [2017-12-12T17:38:21.748514 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/provisioner/base.rb:83:in `rescue in call'
+E, [2017-12-12T17:38:21.748526 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/provisioner/base.rb:86:in `call'
+E, [2017-12-12T17:38:21.748537 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:384:in `block in converge_action'
+E, [2017-12-12T17:38:21.748549 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-12T17:38:21.748561 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-12T17:38:21.748572 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-12T17:38:21.748587 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-12T17:38:21.748600 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:380:in `converge_action'
+E, [2017-12-12T17:38:21.748611 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-12T17:38:21.748623 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-12T17:38:21.748634 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-12T17:38:21.748646 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2017-12-12T17:38:21.748657 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-12T17:38:21.748669 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-12T17:38:21.748680 #81703] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-12T17:38:21.748691 #81703] ERROR -- default-ubuntu-1604: ----End Backtrace-----

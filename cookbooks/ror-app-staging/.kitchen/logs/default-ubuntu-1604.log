@@ -1,3 +1,0 @@
-I, [2017-12-11T15:25:43.634753 #14196]  INFO -- default-ubuntu-1604: -----> Destroying <default-ubuntu-1604>...
-I, [2017-12-11T15:25:45.115445 #14196]  INFO -- default-ubuntu-1604: EC2 instance <i-007fb850820269f5b> destroyed.
-I, [2017-12-11T15:25:45.117042 #14196]  INFO -- default-ubuntu-1604: Finished destroying <default-ubuntu-1604> (0m1.48s).
