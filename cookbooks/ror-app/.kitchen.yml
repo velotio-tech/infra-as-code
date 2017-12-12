@@ -29,6 +29,9 @@ suites:
     data_bags_path: 'test/smoke/data_bags'
     run_list:
       - recipe[ror-app::default]
+    attributes:
+      rorapp:
+         port: 3000
     verifier:
       inspec_tests:
         - test/smoke/default/integration_test.rb
