@@ -6,10 +6,17 @@
 
 require 'spec_helper'
 require 'chefspec'
-
-
-ChefSpec::Coverage.start!
-
+#require 'simplecov'
+#require 'simplecov-json'
+#require 'simplecov-rcov'
+#
+#SimpleCov.formatters = [
+#  SimpleCov::Formatter::RcovFormatter
+#]
+#SimpleCov.start
+#
+#ChefSpec::Coverage.start!
+#
 describe 'ror-app::default' do
   let(:chef_run) do
     runner = ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
