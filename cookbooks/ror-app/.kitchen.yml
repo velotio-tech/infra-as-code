@@ -19,7 +19,7 @@ verifier:
   output: ./inspec.xml
 
 transport:
-  ssh_key: ~/ssh-keys/coupa.pem
+  ssh_key: /opt/keys/coupa.pem
 
 platforms:
   - name: ubuntu-16.04
