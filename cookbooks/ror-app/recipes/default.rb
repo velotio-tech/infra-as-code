@@ -66,8 +66,8 @@ script 'run_app' do
   code <<-EOH
   rake db:create
   rake db:migrate
-  rails s -d -b 0.0.0.0
+  rails s -d -b 0.0.0.0 -p #{node['rorapp']['port']}
   EOH
-not_if ("netstat -nlt | grep 3000")
+not_if ("netstat -nlt | grep 5000")
 
 end

@@ -1,3 +1,96 @@
-I, [2017-12-09T12:19:37.013133 #16371]  INFO -- Kitchen: -----> Starting Kitchen (v1.17.0)
-I, [2017-12-09T12:19:39.775148 #16371]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1604>...
-I, [2017-12-09T12:19:41.341171 #16371]  INFO -- Kitchen: -----> Kitchen is finished. (0m4.33s)
+I, [2017-12-11T20:39:13.726176 #24191]  INFO -- Kitchen: -----> Starting Kitchen (v1.17.0)
+I, [2017-12-11T20:39:16.479661 #24191]  INFO -- Kitchen: -----> Creating <default-ubuntu-1604>...
+E, [2017-12-11T20:39:18.175201 #24191] ERROR -- Kitchen: ------Exception-------
+E, [2017-12-11T20:39:18.175377 #24191] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2017-12-11T20:39:18.175444 #24191] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Failed to complete #create action: [The subnet ID 'subnet-b0f8b69a' does not exist] on default-ubuntu-1604
+E, [2017-12-11T20:39:18.175501 #24191] ERROR -- Kitchen: ----------------------
+E, [2017-12-11T20:39:18.176562 #24191] ERROR -- Kitchen: ------Backtrace-------
+E, [2017-12-11T20:39:18.176633 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:183:in `report_errors'
+E, [2017-12-11T20:39:18.176686 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:174:in `run_action'
+E, [2017-12-11T20:39:18.176736 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command/action.rb:36:in `block in call'
+E, [2017-12-11T20:39:18.176786 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-11T20:39:18.176834 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command/action.rb:34:in `call'
+E, [2017-12-11T20:39:18.176883 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/cli.rb:53:in `perform'
+E, [2017-12-11T20:39:18.176932 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/cli.rb:187:in `block (2 levels) in <class:CLI>'
+E, [2017-12-11T20:39:18.176979 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2017-12-11T20:39:18.177025 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2017-12-11T20:39:18.177072 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/cli.rb:334:in `invoke_task'
+E, [2017-12-11T20:39:18.177118 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2017-12-11T20:39:18.177164 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2017-12-11T20:39:18.177210 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2017-12-11T20:39:18.177269 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2017-12-11T20:39:18.177318 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/bin/kitchen:13:in `<top (required)>'
+E, [2017-12-11T20:39:18.177365 #24191] ERROR -- Kitchen: /opt/chefdk/bin/kitchen:267:in `load'
+E, [2017-12-11T20:39:18.177411 #24191] ERROR -- Kitchen: /opt/chefdk/bin/kitchen:267:in `<main>'
+E, [2017-12-11T20:39:18.177457 #24191] ERROR -- Kitchen: ----End Backtrace-----
+E, [2017-12-11T20:39:18.177502 #24191] ERROR -- Kitchen: -Composite Exception--
+E, [2017-12-11T20:39:18.177547 #24191] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2017-12-11T20:39:18.177592 #24191] ERROR -- Kitchen: Message: Failed to complete #create action: [The subnet ID 'subnet-b0f8b69a' does not exist] on default-ubuntu-1604
+E, [2017-12-11T20:39:18.177638 #24191] ERROR -- Kitchen: ----------------------
+E, [2017-12-11T20:39:18.177682 #24191] ERROR -- Kitchen: ------Backtrace-------
+E, [2017-12-11T20:39:18.177728 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/raise_response_errors.rb:15:in `call'
+E, [2017-12-11T20:39:18.177782 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/jsonvalue_converter.rb:20:in `call'
+E, [2017-12-11T20:39:18.177854 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/idempotency_token.rb:18:in `call'
+E, [2017-12-11T20:39:18.177906 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/param_converter.rb:20:in `call'
+E, [2017-12-11T20:39:18.177954 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/response_target.rb:21:in `call'
+E, [2017-12-11T20:39:18.178001 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/request.rb:70:in `send_request'
+E, [2017-12-11T20:39:18.178048 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/base.rb:207:in `block (2 levels) in define_operation_methods'
+E, [2017-12-11T20:39:18.178095 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/request.rb:24:in `call'
+E, [2017-12-11T20:39:18.178141 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:41:in `call'
+E, [2017-12-11T20:39:18.178188 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:87:in `call'
+E, [2017-12-11T20:39:18.178235 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operation_methods.rb:19:in `block in add_operation'
+E, [2017-12-11T20:39:18.178287 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/aws/client.rb:103:in `create_instance'
+E, [2017-12-11T20:39:18.178334 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:345:in `submit_server'
+E, [2017-12-11T20:39:18.178382 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:186:in `create'
+E, [2017-12-11T20:39:18.178428 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2017-12-11T20:39:18.178475 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2017-12-11T20:39:18.178550 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-11T20:39:18.178617 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-11T20:39:18.178689 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-11T20:39:18.178757 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-11T20:39:18.178813 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2017-12-11T20:39:18.178861 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2017-12-11T20:39:18.178909 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-11T20:39:18.178954 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-11T20:39:18.179000 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-11T20:39:18.179058 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:124:in `create'
+E, [2017-12-11T20:39:18.179107 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-11T20:39:18.179154 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-11T20:39:18.179200 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-11T20:39:18.179251 #24191] ERROR -- Kitchen: ----End Backtrace-----
+E, [2017-12-11T20:39:18.179297 #24191] ERROR -- Kitchen: ---Nested Exception---
+E, [2017-12-11T20:39:18.179341 #24191] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2017-12-11T20:39:18.179353 #24191] ERROR -- Kitchen: Message: Failed to complete #create action: [The subnet ID 'subnet-b0f8b69a' does not exist]
+E, [2017-12-11T20:39:18.179368 #24191] ERROR -- Kitchen: ----------------------
+E, [2017-12-11T20:39:18.179381 #24191] ERROR -- Kitchen: ------Backtrace-------
+E, [2017-12-11T20:39:18.179393 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/raise_response_errors.rb:15:in `call'
+E, [2017-12-11T20:39:18.179407 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/jsonvalue_converter.rb:20:in `call'
+E, [2017-12-11T20:39:18.179419 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/idempotency_token.rb:18:in `call'
+E, [2017-12-11T20:39:18.179431 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/param_converter.rb:20:in `call'
+E, [2017-12-11T20:39:18.179444 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/response_target.rb:21:in `call'
+E, [2017-12-11T20:39:18.179457 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/request.rb:70:in `send_request'
+E, [2017-12-11T20:39:18.179470 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/base.rb:207:in `block (2 levels) in define_operation_methods'
+E, [2017-12-11T20:39:18.179482 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/request.rb:24:in `call'
+E, [2017-12-11T20:39:18.179495 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:41:in `call'
+E, [2017-12-11T20:39:18.179507 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:87:in `call'
+E, [2017-12-11T20:39:18.179519 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operation_methods.rb:19:in `block in add_operation'
+E, [2017-12-11T20:39:18.179532 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/aws/client.rb:103:in `create_instance'
+E, [2017-12-11T20:39:18.179544 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:345:in `submit_server'
+E, [2017-12-11T20:39:18.179556 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:186:in `create'
+E, [2017-12-11T20:39:18.179569 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2017-12-11T20:39:18.179582 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2017-12-11T20:39:18.179597 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-11T20:39:18.179610 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-11T20:39:18.179623 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-11T20:39:18.180019 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-11T20:39:18.180036 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2017-12-11T20:39:18.180049 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2017-12-11T20:39:18.180061 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-11T20:39:18.180073 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-11T20:39:18.180089 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-11T20:39:18.180102 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:124:in `create'
+E, [2017-12-11T20:39:18.180114 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-11T20:39:18.180127 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-11T20:39:18.180139 #24191] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-11T20:39:18.180151 #24191] ERROR -- Kitchen: ----End Backtrace-----

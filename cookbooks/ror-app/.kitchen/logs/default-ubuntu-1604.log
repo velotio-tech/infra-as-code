@@ -1,3 +1,43 @@
-I, [2017-12-09T12:19:39.775208 #16371]  INFO -- default-ubuntu-1604: -----> Destroying <default-ubuntu-1604>...
-I, [2017-12-09T12:19:41.338843 #16371]  INFO -- default-ubuntu-1604: EC2 instance <i-0ab5a7737a20a3522> destroyed.
-I, [2017-12-09T12:19:41.340532 #16371]  INFO -- default-ubuntu-1604: Finished destroying <default-ubuntu-1604> (0m1.56s).
+I, [2017-12-11T20:39:16.479719 #24191]  INFO -- default-ubuntu-1604: -----> Creating <default-ubuntu-1604>...
+I, [2017-12-11T20:39:17.674723 #24191]  INFO -- default-ubuntu-1604: Detected platform: ubuntu version 16.04 on x86_64. Instance Type: t2.micro. Default username: ubuntu (default).
+I, [2017-12-11T20:39:17.675197 #24191]  INFO -- default-ubuntu-1604: If you are not using an account that qualifies under the AWS
+free-tier, you may be charged to run these suites. The charge
+should be minimal, but neither Test Kitchen nor its maintainers
+are responsible for your incurred costs.
+
+E, [2017-12-11T20:39:18.130291 #24191] ERROR -- default-ubuntu-1604: Create failed on instance <default-ubuntu-1604>.
+E, [2017-12-11T20:39:18.130764 #24191] ERROR -- default-ubuntu-1604: ------Exception-------
+E, [2017-12-11T20:39:18.130855 #24191] ERROR -- default-ubuntu-1604: Class: Aws::EC2::Errors::InvalidSubnetIDNotFound
+E, [2017-12-11T20:39:18.130907 #24191] ERROR -- default-ubuntu-1604: Message: The subnet ID 'subnet-b0f8b69a' does not exist
+E, [2017-12-11T20:39:18.130969 #24191] ERROR -- default-ubuntu-1604: ----------------------
+E, [2017-12-11T20:39:18.131016 #24191] ERROR -- default-ubuntu-1604: ------Backtrace-------
+E, [2017-12-11T20:39:18.131058 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/raise_response_errors.rb:15:in `call'
+E, [2017-12-11T20:39:18.131102 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/jsonvalue_converter.rb:20:in `call'
+E, [2017-12-11T20:39:18.131151 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/idempotency_token.rb:18:in `call'
+E, [2017-12-11T20:39:18.131218 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/aws-sdk-core/plugins/param_converter.rb:20:in `call'
+E, [2017-12-11T20:39:18.131274 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/plugins/response_target.rb:21:in `call'
+E, [2017-12-11T20:39:18.131318 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/request.rb:70:in `send_request'
+E, [2017-12-11T20:39:18.131360 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-core-2.10.45/lib/seahorse/client/base.rb:207:in `block (2 levels) in define_operation_methods'
+E, [2017-12-11T20:39:18.131402 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/request.rb:24:in `call'
+E, [2017-12-11T20:39:18.131457 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:41:in `call'
+E, [2017-12-11T20:39:18.131502 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operations.rb:87:in `call'
+E, [2017-12-11T20:39:18.131545 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/aws-sdk-resources-2.10.45/lib/aws-sdk-resources/operation_methods.rb:19:in `block in add_operation'
+E, [2017-12-11T20:39:18.131587 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/aws/client.rb:103:in `create_instance'
+E, [2017-12-11T20:39:18.131628 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:345:in `submit_server'
+E, [2017-12-11T20:39:18.131670 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-ec2-1.3.2/lib/kitchen/driver/ec2.rb:186:in `create'
+E, [2017-12-11T20:39:18.131711 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2017-12-11T20:39:18.131777 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2017-12-11T20:39:18.131825 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-11T20:39:18.131879 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-11T20:39:18.131923 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-11T20:39:18.131966 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-11T20:39:18.132008 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2017-12-11T20:39:18.132049 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2017-12-11T20:39:18.132091 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-11T20:39:18.132132 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-11T20:39:18.132174 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-11T20:39:18.132215 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/instance.rb:124:in `create'
+E, [2017-12-11T20:39:18.132256 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-11T20:39:18.132300 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-11T20:39:18.132312 #24191] ERROR -- default-ubuntu-1604: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.17.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-11T20:39:18.132324 #24191] ERROR -- default-ubuntu-1604: ----End Backtrace-----

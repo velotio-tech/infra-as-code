@@ -18,7 +18,7 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/ror-app'
-depends 'mysql'
+depends 'mysql', '~> 8.5.1'
 depends 'poise-ruby'
 depends 'rake'
 depends 'nodejs'

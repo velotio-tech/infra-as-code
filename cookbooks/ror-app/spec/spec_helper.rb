@@ -10,5 +10,5 @@ SimpleCov.formatters = [
 ]
 SimpleCov.start
 
-require_relative './unit/recipes/default_spec.rb'
+require_relative '../recipes/default.rb'
 
