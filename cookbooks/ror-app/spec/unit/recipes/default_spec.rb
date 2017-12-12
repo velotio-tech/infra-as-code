@@ -6,27 +6,19 @@
 
 require 'spec_helper'
 require 'chefspec'
-#require 'simplecov'
-#require 'simplecov-json'
-#require 'simplecov-rcov'
-#
-#SimpleCov.formatters = [
-#  SimpleCov::Formatter::RcovFormatter
-#]
-#SimpleCov.start
-#
+
 ChefSpec::Coverage.start!
 
 describe 'ror-app::default' do
   let(:chef_run) do
-    runner = ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
-    stub_command("netstat -nlt | grep 3000").and_return(false)
-    stub_data_bag_item('ror_app', 'creds').and_return({
-      id: 'creds',
-      password: 'velotio'
-   })
-
-    runner.converge(described_recipe)
+    ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04') do |node|
+      node.normal['rorapp']['port'] = 3000
+      stub_command("netstat -nlt | grep 3000").and_return(false)
+      stub_data_bag_item('ror_app', 'creds').and_return({
+        id: 'creds',
+        password: 'velotio'
+      })
+    end.converge(described_recipe)
   end
 
   it 'converges successfully' do
